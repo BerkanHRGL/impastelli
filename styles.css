@@ -7,7 +7,7 @@
 .navbar {
     position: relative;
     background-color: #183129;
-    padding: 2rem 4rem;
+    padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -20,18 +20,37 @@
     gap: 2rem;
 }
 
-.nav-center {
+
+
+.navbar {
+    position: relative;
+    background-color: #183129;
+    padding: 1rem;
     display: flex;
     align-items: center;
-    gap: 5rem;  
+    justify-content: space-between;
+    height: 100px; 
 }
 
-.nav-center a {
-    color: white;
+.nav-logo {
+    flex: 0 0 auto;
+    margin-top: 30px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-right: 20px;
+}
+
+.nav-right a {
+    color: #F5F5DC;
     text-decoration: none;
     font-family: "Bona Nova SC", serif;
     font-size: 2rem;
     font-weight: 400;
+    font-style: italic;
 }
 
 .logo {
@@ -40,62 +59,6 @@
     object-fit: contain;
 }
 
-.nav-logo {
-    position: relative;
-}
-
-.nav-logo::after {
-    content: '';
-    position: absolute;
-    top: -1.2rem; 
-    right: -4rem;
-    width: 1px;
-    height: 120%;
-    background-color: white;
-}
-
-.nav-logo::before {
-    content: '';
-    position: absolute;
-    bottom: 0rem;
-    left: -4rem; 
-    width: 149%;
-    height: 1px;
-    background-color: white;
-}
-
-.nav-links {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-family: Arial, sans-serif;
-    font-size: 2rem
-}
-
-.nav-right .account {
-    color: white;
-    text-decoration: none;
-    font-family: "Bona Nova SC", serif;
-}
-
-.nav-right a {
-    color: white;
-    text-decoration: none;
-    font-family: Arial, sans-serif;
-    font-size: 2rem; 
-    font-weight: 500;
-}
-
-.nav-right {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-}
 .order-btn {
     background-color: #ffffff;
     color: #013815;
@@ -113,7 +76,7 @@
 .cart {
     position: relative;
     font-size: 1.5rem;
-    color: white;
+    color: #F5F5DC
 }
 
 .menu-section {
@@ -355,4 +318,183 @@
     gap: 0.5rem;
 }
 
+.hero {
+    position: relative;
+    width: 100%;
+    height: 92vh; /* Full viewport height */
+    overflow: hidden;
+    background-color: #183129;
+}
 
+.hero-image {
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    margin-top: 13%;
+}
+
+.hero-text {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #F5F5DC
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-family: "Playfair Display SC", serif;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    font-family: "Bona Nova SC", serif;
+    margin-top: -1rem;
+    font-style: italic;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.homepage-section {
+    height: 450px;
+    padding: 6rem;
+    padding-left: 10rem;
+    text-align: left;
+    background-color: #F5F5DC;
+}
+
+.homepage-section h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-family: "Playfair Display SC", serif;
+    color: #183129;
+}
+
+.homepage-text p {
+    font-size: 1.4rem;
+    font-family: "Bona Nova SC", serif;
+    font-style: italic;
+    color: #183129;
+}
+
+.pizza-section {
+    background-color: #183129;
+    color: #F5F5DC;
+    padding: 3rem;
+    text-align: center;
+}
+
+.pizza-nav a {
+    color: #F5F5DC;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-family: "Bona Nova SC", serif;
+    font-size: 1.5rem;
+}
+
+.pizza-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.pizza-image {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.pizza-details {
+    max-width: 400px;
+    text-align: left;
+}
+
+.add-to-cart-btn {
+    background-color: #F5F5DC;
+    color: #183129;
+    border: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #E0E0E0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .menu-item img {
+        height: 200px;
+    }
+
+    .hero-image {
+        height: 60%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-left, .nav-right {
+        gap: 1rem;
+    }
+
+    .order-btn {
+        font-size: 1rem;
+    }
+
+    .pizza-display {
+        flex-direction: column;
+    }
+}
+
+.cart-item {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item-controls {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-btn {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 0.5rem;
+    cursor: pointer;
+    margin: 0 0.5rem;
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
