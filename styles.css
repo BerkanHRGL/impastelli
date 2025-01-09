@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    position: relative;
+    background-color: #183129;
+    padding: 2rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px; 
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-center {
+    display: flex;
+    align-items: center;
+    gap: 5rem;  
+}
+
+.nav-center a {
+    color: white;
+    text-decoration: none;
+    font-family: "Bona Nova SC", serif;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.logo {
+    height: 90px;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-logo {
+    position: relative;
+}
+
+.nav-logo::after {
+    content: '';
+    position: absolute;
+    top: -1.2rem; 
+    right: -4rem;
+    width: 1px;
+    height: 120%;
+    background-color: white;
+}
+
+.nav-logo::before {
+    content: '';
+    position: absolute;
+    bottom: 0rem;
+    left: -4rem; 
+    width: 149%;
+    height: 1px;
+    background-color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 2rem
+}
+
+.nav-right .account {
+    color: white;
+    text-decoration: none;
+    font-family: "Bona Nova SC", serif;
+}
+
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 2rem; 
+    font-weight: 500;
+}
+
+.nav-right {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.order-btn {
+    background-color: #ffffff;
+    color: #013815;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.order-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.cart {
+    position: relative;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.menu-section {
+    padding: 10rem 2rem;
+    background-color: #183129;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-item {
+    background: #183129;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    border: 2px solid #ffffff;
+    padding: 40px;
+    margin: 10px;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover;
+}
+
+.menu-item h3 {
+    padding: 1rem;
+    font-family: "Bona Nova SC", serif;
+    color: #ffffff;
+    text-align: center;
+    font-size: 2rem;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 10px;
+}
+
+.menu-item p {
+    padding: 0 1rem 1rem;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Bona Nova SC", serif;
+}
+
+.menu-description {
+    color: #cccccc;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+    font-family: "Bona Nova SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.menu-image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-item:hover .overlay {
+    opacity: 1;
+}
+
+.add-to-cart-btn {
+    background: #183129;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background: #2a4d40;
+}
+
+.cart-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    gap: 2rem;
+}
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.cart-item-details {
+    flex: 1;
+    padding: 0 1rem;
+}
+
+.item-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+
+.remove-btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.remove-btn:hover {
+    transform: scale(1.1);
+}
+
+.cart-total {
+    text-align: right;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 2px solid #eee;
+}
+
+.checkout-btn {
+    background: #183129;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.checkout-btn:hover {
+    background: #2a4d40;
+}
+
+.cart-page {
+    background-color: #183129;
+    min-height: 100vh;
+    color: white;
+    padding: 2rem;
+}
+
+.cart-item {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cart-summary {
+    color: white;
+}
+
+.cart-page h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.item-details h3 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+    font-family: "Bona Nova SC", serif;
+}
+
+.item-details .price {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: white;
+    margin-top: 0.8rem;
+}
+
+.cart-page h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.cart-summary {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+}
+
+.nav-icon-container {
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    height: 100%;
+    margin-top: -2rem; 
+    padding-top: 5.5rem; 
+    margin-right: -4.1rem;
+}
+
+.cart {
+    position: relative;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.nav-icon-container a {
+    transform: translateY(-25px); 
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+

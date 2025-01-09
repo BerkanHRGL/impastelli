@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Impastelli</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="imgs/impastelli_logo.png" alt="Impastelli Logo" class="logo">
+        </div>
+            <div class="nav-center">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="contact.html">About Us</a>
+            </div>
+        </div>
+        <div class="nav-right">
+            <a href="login.html" class="account">My Account</a>
+            <a href="cart.html" class="cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+    </nav>
+    
+    <div class="cart-page">
+        <h2>ORDER</h2>
+        <div id="cart-items"></div>
+        <div class="cart-summary">
+            <p>Total: €<span id="cart-total">0.00</span></p>
+        </div>
+    </div>
+
+    <script src="cart.js"></script>
+</body>
+</html>
