@@ -117,9 +117,36 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+
     function handleMenuPage() {
-        // Attach event listeners for add to cart buttons on menu page
         setupAddToCartButtons();
+        setupSorting();
+    }
+
+    function setupSorting() {
+        const sortSelect = document.getElementById('sort-select');
+        const menuGrid = document.querySelector('.menu-grid');
+
+        if (sortSelect) {
+            sortSelect.addEventListener('change', function() {
+                const menuItems = Array.from(document.querySelectorAll('.menu-item'));
+                
+                menuItems.sort((a, b) => {
+                    const priceA = parseFloat(a.querySelector('.price').textContent.replace('€', ''));
+                    const priceB = parseFloat(b.querySelector('.price').textContent.replace('€', ''));
+                    
+                    if (this.value === 'low-high') {
+                        return priceA - priceB;
+                    } else if (this.value === 'high-low') {
+                        return priceB - priceA;
+                    }
+                    return 0;
+                });
+
+                menuGrid.innerHTML = '';
+                menuItems.forEach(item => menuGrid.appendChild(item));
+            });
+        }
     }
 
     // Determine which page is currently loaded and initialize accordingly

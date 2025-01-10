@@ -799,3 +799,21 @@
 .login-link:hover {
     text-decoration: underline;
 }
+
+.menu-controls {
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: 3rem;
+    width: fit-content;
+}
+
+#sort-select {
+    padding: 0.5rem 1rem;
+    font-family: "Bona Nova SC", serif;
+    background-color: #F5F5DC;
+    color: #183129;
+    border: none;
+    cursor: pointer;
+}
