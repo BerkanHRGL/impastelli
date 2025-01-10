@@ -346,6 +346,7 @@
     font-size: 4rem;
     margin-bottom: 1rem;
     font-family: "Playfair Display SC", serif;
+    font-weight: 800;
 }
 
 .hero-text p {
@@ -372,6 +373,7 @@
     margin-bottom: 1rem;
     font-family: "Playfair Display SC", serif;
     color: #183129;
+    font-weight: 800;
 }
 
 .homepage-text p {
@@ -388,31 +390,75 @@
     text-align: center;
 }
 
+.pizza-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
 .pizza-nav a {
     color: #F5F5DC;
     text-decoration: none;
-    margin: 0 1rem;
     font-family: "Bona Nova SC", serif;
     font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.pizza-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #F5F5DC;
+    transition: width 0.3s ease;
+}
+
+.pizza-nav a:hover::after {
+    width: 100%;
+}
+
+.pizza-nav a.active::after {
+    width: 100%;
 }
 
 .pizza-display {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     gap: 2rem;
-    margin-top: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .pizza-image {
-    width: 300px;
-    height: auto;
-    border-radius: 10px;
+    width: 500px;
+    height: 500px;
+    object-fit: contain;
 }
 
 .pizza-details {
-    max-width: 400px;
+    flex: 1;
     text-align: left;
+    max-width: 400px;
+    padding-left: 2rem;
+}
+
+.pizza-details h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: "Playfair Display SC", serif;
+    font-weight: 800;
+}
+
+.pizza-details p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    font-family: "Bona Nova SC", serif;
 }
 
 .add-to-cart-btn {
@@ -497,4 +543,259 @@
     border: none;
     color: white;
     cursor: pointer;
+}
+
+.social-section {
+    padding: 4rem;
+    background-color: #F5F5DC;
+}
+
+.social-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+}
+
+.social-header i {
+    font-size: 2rem;
+    color: #183129;
+}
+
+.social-header span {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 2rem;
+    color: #183129;
+
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-item {
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+.social-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.social-item img:hover {
+    transform: scale(1.05);
+}
+
+.footer {
+    background-color: #183129;
+    color: #F5F5DC;
+    padding: 4rem 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.footer-logo img {
+    width: 100%;
+    max-width: 400px;
+}
+
+.footer h3 {
+    font-family: "Playfair Display SC", serif;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer h4 {
+    font-family: "Playfair Display SC", serif;
+    font-size: 1.4rem;
+    margin: 1.5rem 0 1rem 0;
+}
+
+.footer p {
+    font-family: "Bona Nova SC", serif;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.newsletter-signup {
+    margin-top: 1rem;
+}
+
+.newsletter-signup input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    background: transparent;
+    border: 1px solid #F5F5DC;
+    color: #F5F5DC;
+}
+
+.newsletter-signup button {
+    padding: 0.8rem 1.5rem;
+    background-color: #F5F5DC;
+    color: #183129;
+    border: none;
+    cursor: pointer;
+    font-family: "Bona Nova SC", serif;
+    transition: opacity 0.3s ease;
+}
+
+.newsletter-signup button:hover {
+    opacity: 0.9;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+    background-color: #183129;
+    padding: 4rem;
+}
+
+.login-form {
+    background-color: #183129;
+    padding: 5rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.login-form h2 {
+    color: #F5F5DC;
+    font-family: "Playfair Display SC", serif;
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 1.5rem;
+    border: 2px solid #F5F5DC;
+    background: transparent;
+    color: #F5F5DC;
+    font-family: "Bona Nova SC", serif;
+    font-size: 1.3rem;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #F5F5DC;
+    font-family: "Bona Nova SC", serif;
+}
+
+.register-link {
+    color: #F5F5DC;
+    text-decoration: none;
+    font-family: "Bona Nova SC", serif;
+    font-style: italic;
+}
+
+.register-link:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: #F5F5DC;
+    color: #183129;
+    border: none;
+    cursor: pointer;
+    font-family: "Bona Nova SC", serif;
+    font-size: 2rem;
+    transition: opacity 0.3s ease;
+}
+
+.login-btn:hover {
+    opacity: 0.9;
+}
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+    background-color: #183129;
+    padding: 4rem;
+}
+
+.register-form {
+    background-color: #183129;
+    padding: 5rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.register-form h2 {
+    color: #F5F5DC;
+    font-family: "Playfair Display SC", serif;
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.register-btn {
+    width: 100%;
+    padding: 1.5rem;
+    background-color: #F5F5DC;
+    color: #183129;
+    border: none;
+    cursor: pointer;
+    font-family: "Bona Nova SC", serif;
+    font-size: 2rem;
+    margin-top: 0.3rem;
+}
+
+.login-link {
+    color: #F5F5DC;
+    text-decoration: none;
+    font-family: "Bona Nova SC", serif;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+.login-link:hover {
+    text-decoration: underline;
 }

@@ -38,34 +38,49 @@ document.addEventListener('DOMContentLoaded', () => {
         const pizzaDescription = pizzaDisplay.querySelector('p');
         const addToCartBtn = pizzaDisplay.querySelector('.add-to-cart-btn');
 
+        if (pizzaNavLinks.length > 0) {
+            pizzaNavLinks[0].classList.add('active');
+        }
+
+        pizzaNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Remove active class from all links
+                pizzaNavLinks.forEach(l => l.classList.remove('active'));
+                
+                // Add active class to clicked link
+                link.classList.add('active');
+
+            });
+        });
+
         const pizzaData = {
             pepperoni: {
                 image: 'imgs/pizza_pepperoni.png',
-                name: 'Pepperoni Pizza',
+                name: 'PEPPERONI PIZZA',
                 description: 'Hand-stretched pizza dough, tomato sauce, creamy mozzarella cheese, and premium sliced pepperoni.',
                 price: '12.99',
             },
             hawaii: {
                 image: 'imgs/pizza_hawaii.png',
-                name: 'Hawaii Pizza',
+                name: 'HAWAII PIZZA',
                 description: 'Tomato sauce, mozzarella, ham, and pineapple.',
                 price: '13.99',
             },
             margherita: {
                 image: 'imgs/pizza_margherita.png',
-                name: 'Margherita Pizza',
+                name: 'MARGHERITA PIZZA',
                 description: 'Tomato sauce, mozzarella cheese, and fresh basil.',
                 price: '11.99',
             },
             napoletana: {
                 image: 'imgs/pizza_napoletana.png',
-                name: 'Napoletana Pizza',
+                name: 'NAPOLETANA PIZZA',
                 description: 'Tomato sauce, mozzarella, anchovies, and olives.',
                 price: '14.99',
             },
             pollo: {
                 image: 'imgs/pizza_pollo.png',
-                name: 'Pollo Pizza',
+                name: 'POLLO PIZZA',
                 description: 'Tomato sauce, mozzarella cheese, tomatoes, and grilled chicken.',
                 price: '12.99',
             }
