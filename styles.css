@@ -115,7 +115,7 @@
 .menu-item h3 {
     padding: 1rem;
     font-family: "Bona Nova SC", serif;
-    color: #ffffff;
+    color: #F5F5DC;
     text-align: center;
     font-size: 2rem;
     text-decoration: underline;
@@ -125,14 +125,14 @@
 
 .menu-item p {
     padding: 0 1rem 1rem;
-    color: #ffffff;
+    color: #F5F5DC;
     font-weight: bold;
     text-align: center;
     font-family: "Bona Nova SC", serif;
 }
 
 .menu-description {
-    color: #cccccc;
+    color: #F5F5DC;
     font-size: 0.9rem;
     text-align: center;
     padding: 0 1rem;
@@ -468,6 +468,8 @@
     padding: 1rem 2rem;
     cursor: pointer;
     font-size: 1.2rem;
+    font-family: "Bona Nova SC", serif;
+    font-weight: 800;
     border-radius: 5px;
 }
 
@@ -602,6 +604,18 @@
     background-color: #183129;
     color: #F5F5DC;
     padding: 4rem 0;
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #F5F5DC;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .footer-content {
@@ -801,19 +815,183 @@
 }
 
 .menu-controls {
-    text-align: center;
+    display: flex;
+    justify-content: flex-start; /* Keep content aligned to the left */
+    align-items: center; /* Center content vertically */
     padding: 1rem;
-    margin-bottom: 2rem;
-    margin-left: auto;
-    margin-right: 3rem;
+    margin-bottom: -10px;
+    margin-left: 1230px; /* Move it more to the left */
     width: fit-content;
 }
 
 #sort-select {
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem;
     font-family: "Bona Nova SC", serif;
-    background-color: #F5F5DC;
-    color: #183129;
+    font-size: 1.6rem;
+    background-color: #183129;
+    color: #F5F5DC;
     border: none;
     cursor: pointer;
+}
+
+.about-hero {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8rem 0;
+    background-color: #183129;
+}
+
+.about-hero-image {
+    height: 100%;
+    width: 80%;
+    object-fit: cover;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #183129;
+}
+
+.about-hero {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8rem 0;
+    background-color: #183129;
+    position: relative;
+    margin-bottom: -80px;
+    z-index: 1;
+}
+
+.vertical-text {
+    position: absolute;
+    left: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #F5F5DC;
+    font-family: "Playfair Display SC", serif;
+    font-size: 5rem;
+    gap: 0.5rem;
+    font-weight: 900;
+}
+
+.vertical-text span {
+    line-height: 1;
+}
+
+.about-hero-image {
+    height: 100%;
+    width: 80%;
+    object-fit: cover;
+    display: block;
+}
+
+.team-section {
+    position: relative;
+    padding-top: 150px; 
+    background-color: #F5F5DC;
+    color: #183129;
+    z-index: 0;
+    padding-bottom: 1rem;
+}
+
+.team-title {
+    text-align: left;
+    font-family: "Playfair Display SC", serif;
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    font-weight: 900;
+    max-width: 1200px;                /* Added to match content width */
+    margin: 0 auto 0rem auto;         /* Changed to center horizontally with bottom margin */
+    padding: 0 4rem;  
+}
+
+.team-content {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.team-text-box {
+    background-color: rgba(245, 245, 220, 0.1);
+    padding: 2rem;
+    flex: 1;
+    border-radius: 8px;
+}
+
+.team-text-box p {
+    font-family: "Bona Nova SC", serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.team-members {
+    display: flex;                    /* Changed to flex for horizontal layout */
+    justify-content: center;          /* Center items horizontally */
+    gap: 6rem;                       /* Space between team members */
+    max-width: 1200px;
+    margin: 4rem auto;               /* Added margin top and bottom */
+    padding: 0 2rem;
+}
+
+.team-member {
+    text-align: center;
+    flex: 0 1 auto;
+}
+
+.team-member h3 {
+    font-size: 2.2rem;              /* Increased text size to match larger images */
+    margin-bottom: 0.8rem;
+    font-family: "Playfair Display SC", serif;
+    font-weight: 900;
+}
+
+.team-member p {
+    font-size: 1.2rem;              /* Increased text size */
+    font-family: "Bona Nova SC", serif;
+    margin-top: -1rem;
+}
+
+.team-member.left-align {
+    text-align: left;            /* Align text to left */
+}
+
+.team-member.right-align {
+    text-align: right;           /* Align text to right */
+}
+
+.member-image {
+    width: 500px;         
+    height: 500px;       
+    margin-bottom: 0.2rem;     
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;               /* Maintain aspect ratio */
+}
+
+.social-heading {
+    background-color: #183129;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.social-heading h2 {
+    color: #F5F5DC;
+    font-family: "Playfair Display SC", serif;
+    font-size: 5rem;
+    font-weight: 900;
+    margin-top: -1rem;
 }
