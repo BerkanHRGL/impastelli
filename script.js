@@ -56,31 +56,31 @@ document.addEventListener('DOMContentLoaded', () => {
         const pizzaData = {
             pepperoni: {
                 image: 'imgs/pizza_pepperoni.png',
-                name: 'PEPPERONI PIZZA',
+                name: 'Pizza Pepperoni',
                 description: 'Hand-stretched pizza dough, tomato sauce, creamy mozzarella cheese, and premium sliced pepperoni.',
                 price: '12.99',
             },
             hawaii: {
                 image: 'imgs/pizza_hawaii.png',
-                name: 'HAWAII PIZZA',
+                name: 'Pizza Hawaii',
                 description: 'Tomato sauce, mozzarella, ham, and pineapple.',
                 price: '13.99',
             },
             margherita: {
                 image: 'imgs/pizza_margherita.png',
-                name: 'MARGHERITA PIZZA',
+                name: 'Pizza Margherita',
                 description: 'Tomato sauce, mozzarella cheese, and fresh basil.',
                 price: '11.99',
             },
             napoletana: {
                 image: 'imgs/pizza_napoletana.png',
-                name: 'NAPOLETANA PIZZA',
+                name: 'Pizza Napoletana',
                 description: 'Tomato sauce, mozzarella, anchovies, and olives.',
                 price: '14.99',
             },
             pollo: {
                 image: 'imgs/pizza_pollo.png',
-                name: 'POLLO PIZZA',
+                name: 'Pizza Pollo',
                 description: 'Tomato sauce, mozzarella cheese, tomatoes, and grilled chicken.',
                 price: '12.99',
             }

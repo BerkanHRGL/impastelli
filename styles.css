@@ -32,9 +32,19 @@
     height: 100px; 
 }
 
+.navbar::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;                     /* Line thickness */
+    background-color: #F5F5DC;       /* Line color */
+}
+
 .nav-logo {
     flex: 0 0 auto;
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 .nav-right {
@@ -163,6 +173,44 @@
 
 .menu-item:hover .overlay {
     opacity: 1;
+}
+
+@media screen and (max-width: 1366px) {
+    .menu-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .menu-item {
+        max-width: 300px;
+    }
+
+    .menu-image-container {
+        height: 200px;
+    }
+
+    .menu-description {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .menu-controls {
+        margin-left: 1000px;
+    }
+
+    #sort-select {
+        font-size: 1.2rem;
+        padding: 0.8rem;
+    }
+
+    .pizza-link h3 {
+        font-size: 1.4rem;
+    }
+
+    .price {
+        font-size: 1.2rem;
+    }
 }
 
 .add-to-cart-btn {
@@ -611,7 +659,7 @@
     content: '';
     display: block;
     width: 100%;
-    height: 2px;
+    height: 1px;
     background-color: #F5F5DC;
     position: absolute;
     top: 0;
@@ -854,6 +902,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #183129;
+        overflow-x: hidden; 
 }
 
 .about-hero {
@@ -1002,7 +1051,8 @@ body {
     color: #183129;
     padding: 1rem 2rem;
     font-family: "Playfair Display SC", serif;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    font-weight: 800;
     text-decoration: none;
     margin-top: 2rem;
     border: none;
