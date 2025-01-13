@@ -995,3 +995,26 @@ body {
     font-weight: 900;
     margin-top: -1rem;
 }
+
+.checkout-btn {
+    display: inline-block;
+    background-color: #F5F5DC;
+    color: #183129;
+    padding: 1rem 2rem;
+    font-family: "Playfair Display SC", serif;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin-top: 2rem;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.checkout-btn:hover {
+    opacity: 0.9;
+}
+
+.cart-summary {
+    text-align: right;
+    margin-top: 2rem;
+}
